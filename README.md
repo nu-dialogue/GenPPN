@@ -74,6 +74,7 @@ mpirun -n 8 -machinefile $PJM_O_NODEINF -display-devel-map -map-by ppr:2:socket 
         --system_nlg_name scgpt_nlg \
         --do_test
 ```
+The result scores will be saved to `$RUN_DPATH/eval_summary.json`.
 
 ### 3. Sample dialogue data to initialize DA contribution
 Sample 16k turns (2000 turns x 8 processes), equivalent to at least 1k dialogues, of dialogue data from the baseline system prior to PPO training.
@@ -86,8 +87,8 @@ mpirun -n 8 -machinefile $PJM_O_NODEINF -display-devel-map -map-by ppr:2:socket 
         --run_dpath $RUN_DPATH \
         --system_nlg_name scgpt_nlg \
         --turns_per_process 2000
-
 ```
+The sampled dialogues will be saved to `$RUN_DPATH/dialogues/*`.
 
 ### 4. PPO training of GenPPN
 Fine-tune Alpaca 7B (using 16 x V100 32GB GPUs). The learning curves will be tracked by wandb.
@@ -137,7 +138,7 @@ mpirun -n 16 -machinefile $PJM_O_NODEINF -display-devel-map -map-by ppr:2:socket
         --adapter_checkpoint_path $ADAPTER_DPATH \
         --do_test
 ```
-This will save the sampled dialogues to `$RL_ADAPTER_DPATH/checkpoints/iteration-150/test_dialogues/*` and the result scores to `$RL_ADAPTER_DPATH/checkpoints/iteration-150/test_summary.json`.
+This will save the sampled dialogues to `$ADAPTER_DPATH/test_dialogues/*` and the result scores to `$ADAPTER_DPATH/test_summary.json`.
 
 ## Citation
 ```bibtex
