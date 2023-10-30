@@ -1,0 +1,18 @@
+--extra-index-url https://download.pytorch.org/whl/cu116
+torch==1.13.1+cu116
+git+https://github.com/huggingface/transformers.git
+git+https://github.com/huggingface/peft.git
+git+https://github.com/lvwerra/trl.git
+bitsandbytes # # Use 0.37.2 if you encounter OOM issues https://github.com/TimDettmers/bitsandbytes/issues/324
+datasets
+evaluate
+accelerate
+jupyter
+wandb
+tensorboard
+tensorboardX
+sentencepiece
+pandas
+seaborn
+scikit-learn>=0.22.0
+spacy<3.0.0
