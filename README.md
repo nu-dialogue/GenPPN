@@ -1,7 +1,7 @@
 # GenPPN
 This repository maintains code for EMNLP 2023 paper:
 
-Enhancing Task-oriented Dialogue Systems with Generative Post-processing Networks [[OpenReview](https://openreview.net/pdf?id=kspXkK9PtA)]
+Enhancing Task-oriented Dialogue Systems with Generative Post-processing Networks [[Paper](https://aclanthology.org/2023.emnlp-main.231/)]
 
 <p align="center" width="100%">
   <a ><img src="assets/method_overview.png" alt="GenPPN Overview"></a>
@@ -142,11 +142,12 @@ This will save the sampled dialogues to `$ADAPTER_DPATH/test_dialogues/*` and th
 
 ## Citation
 ```bibtex
-@inproceedings{ohashi2023enhancing,
-    title={Enhancing Task-oriented Dialogue Systems with Generative Post-processing Networks},
-    author={Ohashi, Atsumoto and Higashinaka, Ryuichiro},
-    booktitle={The 2023 Conference on Empirical Methods in Natural Language Processing},
-    year={2023},
-    url={https://openreview.net/forum?id=kspXkK9PtA}
+@inproceedings{ohashi-higashinaka-2023-enhancing,
+    title = "Enhancing Task-oriented Dialogue Systems with Generative Post-processing Networks",
+    author = "Ohashi, Atsumoto and Higashinaka, Ryuichiro",
+    booktitle = "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing",
+    year = "2023",
+    url = "https://aclanthology.org/2023.emnlp-main.231",
+    pages = "3815--3828",
 }
 ```
